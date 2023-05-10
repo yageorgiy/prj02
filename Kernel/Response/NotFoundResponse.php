@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Kernel;
+namespace Kernel\Response;
 
 
 class NotFoundResponse extends Response

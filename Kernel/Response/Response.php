@@ -1,13 +1,15 @@
 <?php
 
 
-namespace Kernel;
+namespace Kernel\Response;
 
 
 class Response
 {
-    private string $contents;
-    private int $statusCode;
+    protected string $contents;
+    protected int $statusCode;
+    protected string $contentType = "text/html; charset=utf-8";
+    protected string $redirect = "";
 
     /**
      * Response constructor.
@@ -51,5 +53,39 @@ class Response
     {
         $this->statusCode = $statusCode;
     }
+
+    /**
+     * @return string
+     */
+    public function getContentType(): string
+    {
+        return $this->contentType;
+    }
+
+    /**
+     * @param string $contentType
+     */
+    public function setContentType(string $contentType): void
+    {
+        $this->contentType = $contentType;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRedirect(): string
+    {
+        return $this->redirect;
+    }
+
+    /**
+     * @param string $redirect
+     */
+    public function setRedirect(string $redirect): void
+    {
+        $this->redirect = $redirect;
+    }
+
+
 
 }

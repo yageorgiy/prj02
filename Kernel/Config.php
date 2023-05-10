@@ -51,6 +51,7 @@ class Config
               "database_name" => "string",
               "database_user" => "string",
               "database_password" => "string",
+              "api_mount" => "string",
         ];
 
         foreach ($check as $param => $type) {

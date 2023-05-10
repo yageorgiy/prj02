@@ -7,18 +7,19 @@ namespace Kernel;
 use kernel\controller\Controller;
 use kernel\controller\ErrorNotFoundController;
 use kernel\controller\HomeController;
+use Kernel\Response\Response;
 
 class Router
 {
 
-    private Templates $templates;
+    private Kernel $kernel;
 
     /**
      * Router constructor.
      */
-    public function __construct(Templates $templates)
+    public function __construct(Kernel $kernel)
     {
-        $this->templates = $templates;
+        $this->kernel = $kernel;
     }
 
     public function decide(Request $request): Response
@@ -28,7 +29,7 @@ class Router
             default => new ErrorNotFoundController()
         };
 
-        return $controller->processRequest($request, $this->templates);
+        return $controller->processRequest($request, $this->kernel);
     }
 
 }

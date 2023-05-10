@@ -8,16 +8,20 @@ class Request
 {
     private string $path;
     private string $method;
+    private array $getParams;
+    private array $postParams;
 
     /**
      * Request constructor.
      * @param string $path
      * @param string $method
      */
-    public function __construct(string $path, string $method)
+    public function __construct(string $path, string $method, array $getParams = [], array $postParams = [])
     {
         $this->path = $path;
         $this->method = $method;
+        $this->getParams = $getParams;
+        $this->postParams = $postParams;
     }
 
 
@@ -63,5 +67,23 @@ class Request
     {
         $this->method = $method;
     }
+
+    /**
+     * @return array
+     */
+    public function getGetParams(): array
+    {
+        return $this->getParams;
+    }
+
+    /**
+     * @return array
+     */
+    public function getPostParams(): array
+    {
+        return $this->postParams;
+    }
+
+
 
 }

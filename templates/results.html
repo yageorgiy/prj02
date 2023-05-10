@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Игра окончена</title>
+</head>
+<body>
+    <p>Вы дошли до финиша! Игра окончена.</p>
+    <p>Сервер дошел от страницы '{{START_PAGE}}' до страницы '{{END_PAGE}}' за количество переходов: {{COUNT}}</p>
+    <p>Результаты:</p>
+    <table>
+        <tr>
+            <th>Имя игрока</th>
+            <th>Счет</th>
+            <th>Текущая страница</th>
+        </tr>
+        <tr>
+            <td>{{PLAYER1_NAME}}</td>
+            <td>{{PLAYER1_SCORE}}</td>
+            <td>{{PLAYER1_PAGE}}</td>
+        </tr>
+        <tr>
+            <td>{{PLAYER2_NAME}}</td>
+            <td>{{PLAYER2_SCORE}}</td>
+            <td>{{PLAYER2_PAGE}}</td>
+        </tr>
+        <tr>
+            <td>{{PLAYER3_NAME}}</td>
+            <td>{{PLAYER3_SCORE}}</td>
+            <td>{{PLAYER3_PAGE}}</td>
+        </tr>
+        <tr>
+            <td>{{PLAYER4_NAME}}</td>
+            <td>{{PLAYER4_SCORE}}</td>
+            <td>{{PLAYER4_PAGE}}</td>
+        </tr>
+    </table>
+
+    <a href="/">На главную</a>
+</body>
+</html>
