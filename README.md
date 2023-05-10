@@ -11,7 +11,7 @@
 
 ```shell
 git clone https://github.com/yageorgiy/prj02
-cd prj01
+cd prj02
 cp environment.example.ini environment.ini
 
 # Настройка прав для директории проекта
